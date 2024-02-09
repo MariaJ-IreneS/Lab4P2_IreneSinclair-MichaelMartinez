@@ -4,10 +4,11 @@ import java.util.Random;
 
 public class TipoViento extends Agentes {
 
-    public TipoViento(double precio, double vida, int puntosAtaque, String nombre, int edad) {
+    public TipoViento(String nombre, int puntosAtaque, double precio, double vida, int edad) {
         super(precio, vida, puntosAtaque, nombre, edad);
     }
 
+    @Override
     public void Dano(Agentes agente) {
         Random aleatorio = new Random();
         int numAleatorio = aleatorio.nextInt(8);

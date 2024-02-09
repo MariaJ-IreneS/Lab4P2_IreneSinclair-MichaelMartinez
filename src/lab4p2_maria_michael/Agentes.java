@@ -13,8 +13,47 @@ public abstract class Agentes extends Persona {
         this.puntosAtaque = puntosAtaque;
     }
 
-    public void Dano() {
+    public double getPrecio() {
+        return precio;
     }
+
+    public double getVida() {
+        return vida;
+    }
+
+    public int getPuntosAtaque() {
+        return puntosAtaque;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public void setVida(double vida) {
+        this.vida = vida;
+    }
+
+    public void setPuntosAtaque(int puntosAtaque) {
+        this.puntosAtaque = puntosAtaque;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public abstract void Dano(Agentes agente);
 
     @Override
     public String toString() {
