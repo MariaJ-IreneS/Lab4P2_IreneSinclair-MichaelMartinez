@@ -62,6 +62,11 @@ public class Usuario extends Persona {
         this.agente = agente;
     }
 
+    @Override
+    public String toString() {
+        return "Usuario: \n" + "Correo: " + correo + "Usuario: " + usuario + "Clave: " + clave + "Dinero: " + dinero + "Agente: " + agente;
+    }
+
     public boolean verificarUsuario(String correo, String usuario, String contraseña) {
         return this.correo.equals(correo) && this.clave.equals(contraseña) && this.usuario.equals(usuario);
     }

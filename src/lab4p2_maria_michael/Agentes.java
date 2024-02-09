@@ -1,13 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package lab4p2_maria_michael;
 
-/**
- *
- * @author Irene Sinclair
- */
-public class Agentes {
-    
+public abstract class Agentes extends Persona {
+
+    protected double precio;
+    protected double vida;
+    protected int puntosAtaque;
+
+    public Agentes(double precio, double vida, int puntosAtaque, String nombre, int edad) {
+        super(nombre, edad);
+        this.precio = precio;
+        this.vida = vida;
+        this.puntosAtaque = puntosAtaque;
+    }
+
+    public void Dano() {
+    }
+
+    @Override
+    public String toString() {
+        return "Agentes: \n" + "\nPrecio: " + precio + "\nVida: " + vida + "\nPuntos Ataque: " + puntosAtaque;
+    }
 }
