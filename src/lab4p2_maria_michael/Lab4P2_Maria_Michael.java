@@ -47,5 +47,49 @@ public class Lab4P2_Maria_Michael {
         listaU.add(persona2);
         listaU.add(persona3);
 
+        boolean inicioSesionExitoso = false;
+        Usuario usuario = null;
+
+        do {
+            System.out.print("Ingrese su correo: ");
+            String correoIngresado = entrada.nextLine();
+
+            System.out.print("Ingrese su usuario: ");
+            String usuarioIngresado = entrada.nextLine();
+
+            System.out.print("Ingrese su clave: ");
+            String contraseñaIngresada = entrada.nextLine();
+
+            if (persona1.verificarUsuario(correoIngresado, usuarioIngresado, contraseñaIngresada)) {
+                usuario = persona1;
+                inicioSesionExitoso = true;
+            } else if (persona2.verificarUsuario(correoIngresado, usuarioIngresado, contraseñaIngresada)) {
+                usuario = persona2;
+                inicioSesionExitoso = true;
+            } else if (persona3.verificarUsuario(correoIngresado, usuarioIngresado, contraseñaIngresada)) {
+                usuario = persona3;
+                inicioSesionExitoso = true;
+            } else {
+                System.out.println("Inicio de sesion fallido. Por favor, intente nuevamente.");
+            }
+
+        } while (!inicioSesionExitoso);
+        System.out.println("Inicio de sesion exitoso.");
+
+        boolean bandera = true;
+        int opcionMenu = 0;
+        while (bandera) {
+            System.out.println("1. Jugar");
+            System.out.println("2. Ver agentes");
+            System.out.println("3. Salir");
+            switch (opcionMenu) {
+
+                case 1:
+                    break;
+
+                case 2:
+                    break;
+            }
+        }
     }
 }
