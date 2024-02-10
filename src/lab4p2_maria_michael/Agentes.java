@@ -57,6 +57,6 @@ public abstract class Agentes extends Persona {
 
     @Override
     public String toString() {
-        return "Agentes: \n" + "\nPrecio: " + precio + "\nVida: " + vida + "\nPuntos Ataque: " + puntosAtaque;
+        return super.toString() + "    Agentes---> " + "  Precio: " + precio + "  Vida: " + vida + "  Puntos Ataque:" + puntosAtaque;
     }
 }

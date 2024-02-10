@@ -18,20 +18,28 @@ public class TipoViento extends Agentes {
 
             if (agente instanceof TipoFuego) {
                 dano = getPuntosAtaque() * 1.5;
-                double nuevodanio;
-                nuevodanio = getVida() - dano;
-                setVida(nuevodanio);
+                double nuevodanio = 0;
+                nuevodanio = agente.getVida() - dano;
+                agente.setVida(nuevodanio);
+                System.out.println("Danio hecho: " + dano);
             } else if (agente instanceof TipoAgua) {
                 dano = getPuntosAtaque() * 0.7;
-                double nuevodanio;
-                nuevodanio = getVida() - dano;
-                setVida(nuevodanio);
+                double nuevodanio = 0;
+                nuevodanio = agente.getVida() - dano;
+                agente.setVida(nuevodanio);
+                System.out.println("Danio hecho: " + dano);
             } else if (agente instanceof TipoViento) {
                 dano = getPuntosAtaque() * 1.1;
-                double nuevodanio;
-                nuevodanio = getVida() - dano;
-                setVida(nuevodanio);
+                double nuevodanio = 0;
+                nuevodanio = agente.getVida() - dano;
+                agente.setVida(nuevodanio);
+                System.out.println("Danio hecho: " + dano);
+            } else {
+                System.out.println("Agente del mismo tipo, danio: " + 0);
             }
+        } else {
+            double dano = 0.0;
+            System.out.println("Aletatorio 7, Fallo Danio: " + dano);
         }
     }
 

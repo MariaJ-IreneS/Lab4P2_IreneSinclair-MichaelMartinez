@@ -7,8 +7,8 @@ public class Usuario extends Persona {
     private String correo;
     private String usuario;
     private String clave;
-    private double dinero;
-    ArrayList<Agentes> agente;
+    protected double dinero;
+    protected ArrayList<Agentes> agente;
 
     public Usuario() {
     }
@@ -64,11 +64,11 @@ public class Usuario extends Persona {
 
     @Override
     public String toString() {
-        return "Usuario: \n" + "Correo: " + correo + "Usuario: " + usuario + "Clave: " + clave + "Dinero: " + dinero + "Agente: " + agente;
+        return super.toString() + "Usuario--->  " + "  Correo: " + correo + "  Usuario: " + usuario + "  Clave: " + clave + "  Dinero: " + dinero + "  Agente: " + agente;
     }
 
-    public boolean verificarUsuario(String correo, String usuario, String contraseña) {
-        return this.correo.equals(correo) && this.clave.equals(contraseña) && this.usuario.equals(usuario);
+    public boolean verificarUsuario(String usuarioOCorreo, String contrasenaIngresada) {
+        return (usuarioOCorreo.equals(correo) || usuarioOCorreo.equals(usuario)) && contrasenaIngresada.equals(clave);
     }
 
 }
