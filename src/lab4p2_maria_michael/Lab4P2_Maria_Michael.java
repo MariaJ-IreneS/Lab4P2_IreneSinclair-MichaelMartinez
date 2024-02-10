@@ -208,6 +208,7 @@ public class Lab4P2_Maria_Michael {
                 case 3:
                     bandera = false;
                     System.out.println("Saliendo del programa. Volviendo al Escritorio. ");
+                    System.out.println("Casi nos trauma el seteo de la vida.  Julio nos hizo feliz :)");
 
                     break;
 
